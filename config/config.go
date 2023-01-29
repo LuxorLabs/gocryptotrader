@@ -1821,5 +1821,15 @@ func (c *Exchange) Validate() error {
 	if c == nil {
 		return errExchangeConfigIsNil
 	}
+
+	// TODO: validate exchange fields.
+	if c.ConnectionMonitorDelay == 0 {
+		return fmt.Errorf("connection monitor delay not set")
+	}
+
+	if c.ConnectionMonitorDelay < 0 {
+		return fmt.Errorf("connection monitor delay cannot be negative")
+	}
+
 	return nil
 }

@@ -149,6 +149,7 @@ type Exchange struct {
 	WebsocketResponseCheckTimeout time.Duration          `json:"websocketResponseCheckTimeout"`
 	WebsocketResponseMaxLimit     time.Duration          `json:"websocketResponseMaxLimit"`
 	WebsocketTrafficTimeout       time.Duration          `json:"websocketTrafficTimeout"`
+	ConnectionMonitorDelay        time.Duration          `json:"connectionMonitorDelay"`
 	ProxyAddress                  string                 `json:"proxyAddress,omitempty"`
 	BaseCurrencies                currency.Currencies    `json:"baseCurrencies"`
 	CurrencyPairs                 *currency.PairsManager `json:"currencyPairs"`
